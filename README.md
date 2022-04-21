@@ -1,2 +1,2 @@
-# kubernets-labs
+# Kubernetes Labs
 Laboratório Kubernets
