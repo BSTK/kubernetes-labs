@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name:  pod-nginx-v2-label
+  labels:
+    envireonment: producao
+    camada: backend
+
+spec:
+  containers:
+    - name:  pod-nginx-v2-container
+      image:  nginx:latest

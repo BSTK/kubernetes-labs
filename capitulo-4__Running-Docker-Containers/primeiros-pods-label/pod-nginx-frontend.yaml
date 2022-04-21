@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name:  pod-nginx-label
+  labels:
+    envireonment: producao
+    camada: frontend
+
+spec:
+  containers:
+    - name:  pod-nginx-container
+      image:  nginx:latest
