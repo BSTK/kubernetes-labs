@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+
+metadata:
+  name:  primeiro-job-hello-world-v3
+
+spec:
+  parallelism: 10
+  template:
+    metadata:
+      name:  primeiro-job-hello-world-v3
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: primeiro-job-hello-world-v3-container
+          image:  busybox
+          command: ["/bin/sh", "-c"]
+          args: ["echo 'Hello Wold!'", "sleep 3", "echo 'Chegabdo mais Pods!!'"]
