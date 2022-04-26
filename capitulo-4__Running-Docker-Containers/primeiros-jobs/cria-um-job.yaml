@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+
+metadata:
+  name:  primeiro-job-hello-world
+
+spec:
+  template:
+    metadata:
+      name:  primeiro-job-hello-world
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: primeiro-job-hello-world-container
+          image:  busybox
+          command: ["/bin/sh", "-c"]
+          args: ["echo 'Hello Wold!'"]
