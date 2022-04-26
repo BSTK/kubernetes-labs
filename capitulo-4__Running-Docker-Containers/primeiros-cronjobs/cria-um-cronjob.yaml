@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: CronJob
+
+metadata:
+  name:  primeiro-cronjob-hello-world
+
+spec:
+  schedule:
+    ttlSecondsAfterFinished: 30
+
+  template:
+    metadata:
+      name:  primeiro-cronjob-hello-world
+    spec:
+      restartPolicy: OnFailure
+      containers:
+      - name: primeiro-cronjob-hello-world-container
+        image:  busybox
+        command: ["/bin/sh", "-c"]
+        args: ["echo 'Cronjob Hello World!'"]
