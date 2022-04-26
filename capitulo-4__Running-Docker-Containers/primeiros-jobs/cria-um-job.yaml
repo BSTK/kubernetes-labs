@@ -5,6 +5,7 @@ metadata:
   name:  primeiro-job-hello-world
 
 spec:
+  completions: 10
   template:
     metadata:
       name:  primeiro-job-hello-world
